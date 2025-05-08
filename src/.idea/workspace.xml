@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d8fdd84-e6f0-4359-a85e-96340b566fe5" name="Changes" comment="" />
+    <list default="true" id="0d8fdd84-e6f0-4359-a85e-96340b566fe5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/models/model_lstm.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ảnh minh họa/f1_score_comparison_colored.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeepfakeDetector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepfakeDetector.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_rf.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_rf.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_svm.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_svm.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -29,21 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RandomForest_GradientBoosting.executor": "Run",
-    "Python.SVM.executor": "Run",
-    "Python.data_utils.executor": "Run",
-    "Python.feature_utils.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model_driver.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_svm.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
-    "last_opened_file_path": "C:/Users/buigi/Desktop/Dự án/Do_An_Tot_Nghiep/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RandomForest_GradientBoosting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SVM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_driver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_svm.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/buigi/Desktop/Dự án/Do_An_Tot_Nghiep/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\buigi\PycharmProjects\DeepfakeDetector" />
@@ -114,5 +128,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>

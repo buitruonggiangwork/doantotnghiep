@@ -2,6 +2,7 @@ import os
 import torch
 import torch.nn as nn
 import torchaudio
+from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
 from torch.utils.data import DataLoader
@@ -114,17 +115,24 @@ class SVMDriver(ModelDriver):
         scaler = StandardScaler()
         self.X_train = scaler.fit_transform(self.X_train)
         self.X_eval = scaler.transform(self.X_eval)
-        self.model = SVC()
+        self.model = None  # Khởi tạo sau trong GridSearch
 
     def _load_model(self):
         if os.path.exists(self.model_path):
             self.model = joblib.load(self.model_path)
 
-
     def train(self):
         self._load_model()
-        print("Training SVM...")
-        self.model.fit(self.X_train, self.y_train)
+        print("Tuning SVM với GridSearchCV...")
+        param_grid = {
+            "C": [0.1, 1, 10],
+            "kernel": ["rbf", "linear"],
+            "gamma": ["scale", "auto"]
+        }
+        grid = GridSearchCV(SVC(), param_grid, cv=5, n_jobs=-1, verbose=1)
+        grid.fit(self.X_train, self.y_train)
+        print("Best params:", grid.best_params_)
+        self.model = grid.best_estimator_
         joblib.dump(self.model, self.model_path)
 
     def evaluate(self):
@@ -141,8 +149,7 @@ class RandomForestDriver(ModelDriver):
         scaler = StandardScaler()
         self.X_train = scaler.fit_transform(self.X_train)
         self.X_eval = scaler.transform(self.X_eval)
-        self.model = RandomForestClassifier(n_estimators=100)
-
+        self.model = None  # Sẽ khởi tạo từ GridSearch
 
     def _load_model(self):
         if os.path.exists(self.model_path):
@@ -150,11 +157,21 @@ class RandomForestDriver(ModelDriver):
 
     def train(self):
         self._load_model()
-        print("Training Random Forest...")
-        self.model.fit(self.X_train, self.y_train)
+        print("Tuning Random Forest với GridSearchCV...")
+        param_grid = {
+            "n_estimators": [100, 200, 500],
+            "max_depth": [None, 10, 20],
+            "min_samples_split": [2, 5],
+            "min_samples_leaf": [1, 2]
+        }
+        grid = GridSearchCV(RandomForestClassifier(), param_grid, cv=5, n_jobs=-1, verbose=1)
+        grid.fit(self.X_train, self.y_train)
+        print("Best params:", grid.best_params_)
+        self.model = grid.best_estimator_
         joblib.dump(self.model, self.model_path)
 
     def evaluate(self):
         self._load_model()
         y_pred = self.model.predict(self.X_eval)
         print(classification_report(self.y_eval, y_pred, digits=4))
+

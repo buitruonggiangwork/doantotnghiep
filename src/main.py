@@ -1,7 +1,7 @@
 from model_driver import LSTMDriver, RNNDriver, SVMDriver, RandomForestDriver
 
 def main():
-    model = "rf"
+    model = "lstm"
     action = "eval"
 
     drivers = {
@@ -25,3 +25,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
