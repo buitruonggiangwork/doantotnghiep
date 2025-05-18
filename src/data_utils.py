@@ -16,33 +16,25 @@ class SceneFakeDataset(Dataset):
         self.all_files = self.real_files + self.fake_files
         self.labels = [0] * len(self.real_files) + [1] * len(self.fake_files)
         self.target_length = target_length
-
     def __len__(self):
         return len(self.all_files)
-
     def __getitem__(self, idx):
         filepath = self.all_files[idx]
         waveform, sr = torchaudio.load(filepath)
-        waveform = waveform[0]  # lấy kênh đầu tiên nếu stereo
-
-        # Chuẩn hóa độ dài
+        waveform = waveform[0]
         if waveform.size(0) < self.target_length:
             pad = self.target_length - waveform.size(0)
             waveform = nn.functional.pad(waveform, (0, pad))
         else:
             waveform = waveform[:self.target_length]
-
         return waveform, self.labels[idx]
-
 
 
 def extract_mfcc_mean(file_path, duration=4.0, sample_rate=16000, n_mfcc=40):
     waveform, sr = sf.read(file_path)
     waveform = waveform[:int(sample_rate * duration)]
-
     if sr != sample_rate:
         waveform = torchaudio.functional.resample(torch.tensor(waveform), sr, sample_rate).numpy()
-
     waveform = torch.tensor(waveform).float().unsqueeze(0)
     mfcc_transform = torchaudio.transforms.MFCC(
         sample_rate=sample_rate,
@@ -56,14 +48,12 @@ def extract_mfcc_mean(file_path, duration=4.0, sample_rate=16000, n_mfcc=40):
 
 def load_or_extract_features(root_dir, cache_path):
     if os.path.exists(cache_path):
-        print(f"📦 Đang load đặc trưng từ cache: {cache_path}")
+        print(f" Đang tải đặc trưng từ cache: {cache_path}")
         data = np.load(cache_path)
         return data['X'], data['y']
-
-    print(f"🔍 Trích xuất đặc trưng MFCC từ {root_dir}")
+    print(f" Trích xuất đặc trưng MFCC từ {root_dir}")
     real_path = os.path.join(root_dir, 'real')
     fake_path = os.path.join(root_dir, 'fake')
-
     X, y = [], []
     for folder, label in [(real_path, 0), (fake_path, 1)]:
         for fname in os.listdir(folder):
@@ -73,9 +63,8 @@ def load_or_extract_features(root_dir, cache_path):
                 X.append(feat)
                 y.append(label)
             except Exception as e:
-                print(f"⚠️ Bỏ qua file lỗi: {file_path} ({str(e)})")
-
+                print(f" Bỏ qua file: {file_path} ({str(e)})")
     X, y = np.array(X), np.array(y)
     np.savez_compressed(cache_path, X=X, y=y)
-    print(f"💾 Đã lưu đặc trưng tại: {cache_path}")
+    print(f"  Đã lưu đặc trưng tại: {cache_path}")
     return X, y
