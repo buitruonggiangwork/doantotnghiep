@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8fdd84-e6f0-4359-a85e-96340b566fe5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" afterDir="false" />
     </list>
@@ -33,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RandomForest_GradientBoosting.executor": "Run",
-    "Python.SVM.executor": "Run",
-    "Python.data_utils.executor": "Run",
-    "Python.demo.executor": "Run",
-    "Python.feature_utils.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model_driver.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_svm.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "4dac4c45",
-    "last_opened_file_path": "C:/Users/buigi/Desktop/Dự án/Do_An_Tot_Nghiep/src",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RandomForest_GradientBoosting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SVM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_driver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_svm.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/buigi/Desktop/Dự án/Do_An_Tot_Nghiep/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\buigi\PycharmProjects\DeepfakeDetector" />
