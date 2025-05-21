@@ -20,7 +20,6 @@ class RNNFakeDetectionModel(nn.Module):
         self.fc1 = nn.Linear(hidden_size, dense_size)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(dense_size, num_classes)
-        self.softmax = nn.Softmax(dim=1)
 
 
     def forward(self, waveforms):
@@ -36,4 +35,4 @@ class RNNFakeDetectionModel(nn.Module):
         x = self.fc1(last_hidden)
         x = self.relu(x)
         x = self.fc2(x)
-        return self.softmax(x)
+        return x

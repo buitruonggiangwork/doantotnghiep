@@ -42,7 +42,7 @@ class LSTMDriver(ModelDriver):
             self.optimizer.load_state_dict(checkpoint["optimizer_state"])
             return checkpoint["epoch"] + 1
         return 0
-    def train(self, num_epochs=10):
+    def train(self, num_epochs=100):
         start_epoch = self._load_checkpoint()
         for epoch in range(start_epoch, start_epoch + num_epochs):
             self.model.train()

@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0d8fdd84-e6f0-4359-a85e-96340b566fe5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_lstm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_rnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_lstm.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_rnn.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tài liệu/~$ Án Tốt Nghiệp.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../tài liệu/~$ Án Tốt Nghiệp.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../tài liệu/Đồ Án Tốt Nghiệp.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
